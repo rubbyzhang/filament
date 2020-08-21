@@ -125,8 +125,8 @@ struct Viewport {
  * Specifies the mapping of the near and far clipping plane to window coordinates.
  */
 struct DepthRange {
-    float near = 0.0f;    //!< mapping of the near plane to window coordinates.
-    float far = 1.0f;     //!< mapping of the far plane to window coordinates.
+    float near = 1.0f;    //!< mapping of the near plane to window coordinates.
+    float far = 0.0f;     //!< mapping of the far plane to window coordinates.
 };
 
 /**
@@ -857,7 +857,7 @@ struct RenderPassParams {
     filament::math::float4 clearColor = {};
 
     //! Depth value to clear the depth buffer with
-    double clearDepth = 1.0;
+    double clearDepth = 0.0;
 
     //! Stencil value to clear the stencil buffer with
     uint32_t clearStencil = 0;
